@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "1501a756-a7c7-4820-952e-8998ee0af3b2",
+		"name": "Database II",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27775258"
+	},
+	"item": [
+		{
+			"name": "TGA",
+			"item": [
+				{
+					"name": "Cadastrar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Paulo Lanius\",\n    \"cpf\": \"772.638.860-90\",\n    \"email\": \"paulo@example.com\",\n    \"telefone\": \"+55123456789\",\n    \"dataNascimento\": \"1998-02-11\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar viagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"voos\": [\n        {\n            \"idVoo\": 6,\n            \"localizador\": \"ABC910\"\n        },\n        {\n            \"idVoo\": 7,\n            \"localizador\": \"ABC101\"\n        }\n    ],\n    \"origem\": \"POA-BARCELONA\",\n    \"destino\": \"BARCELONA-POA\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/viagem/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"viagem",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar voo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idAviao\": {\n        \"idAviao\": 6\n    },\n    \"localizador\": \"ABC1012\",\n    \"data\": \"2023-09-30T10:00:00\",\n    \"origem\": \"BARCELONA\",\n    \"destino\": \"POA\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/viagem/voo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"viagem",
+								"voo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar aviao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ciaAerea\": \"Azul Airlines\",\n    \"modelo\": \"Boeing 7223\",\n    \"quantidadeLugares\": \"150\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/viagem/aviao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"viagem",
+								"aviao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar compra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"idCliente\": 3\n    },\n    \"viagem\": {\n        \"idViagem\": 3\n    },\n    \"tickets\": [\n        {\n            \"idTicket\": 3\n        },\n        {\n            \"idTicket\": 4\n        }\n    ],\n    \"valor\": 5800.00,\n    \"dataCompra\": \"2023-09-18\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataInicial\": \"2023-09-25\",\n    \"dataFinal\": \"2023-09-30\",\n    \"status\": \"Reservado\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ticket/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
