@@ -5,6 +5,9 @@
 ### Context:
 Project developed for the discipline of database II using technologies such as: Java, JPA, Spring Boot framework to create an API and a database with a scenario where there is at least one relationship of types 1:1, 1:N and N:N between the entities.
 
+### Diagram: 
+![image](https://github.com/jenniferdiehll/travel-agency-dbms/assets/67604477/397eb403-85e4-4076-8637-a817fd8bac14)
+
 ### 💻 Tecnologies: 
 - Java : Object-oriented programming language
 - JPA : Java Persistence API is a way to interact with relational databases using object-oriented principles
