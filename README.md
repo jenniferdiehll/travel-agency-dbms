@@ -14,10 +14,11 @@ Project developed for the discipline of database II using technologies such as: 
 
 
 ### 🔌 How it works: 
-1. Create a connection with mysql database
-2. Run the api to create the tables/entities developed
-3. Open a plataform to run API's endpoints (We used Postman - **Collection avaiable for download**)
-4. Running the endpoints you will populate the database and get infos about consumer and purchase.
+1. Create a connection with mysql database;
+2. Run the API to create the developed tables/entities (automatically);
+3. Open a platform to run API endpoints (**Collection available for download (Postman)**);
+4. By running the endpoints, you will populate the database and obtain informations;
+5. There are some scripts available to perform queries.
 
 
 **Develop by: Jennifer Diehl, Matheus M. Porto e Paulo Lanius.** 
